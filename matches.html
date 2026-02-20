@@ -2,311 +2,177 @@
 <html>
 <head>
 <title>Matches - ZAKI PRO PES 2026</title>
+
 <style>
 body{
-background:#0d0d0d;
-color:white;
-font-family:Arial;
-text-align:center;
-}
-h1{
-color:#00ffcc;
-margin-top:30px;
-}
-.match{
-background:#1a1a1a;
-margin:15px auto;
-padding:15px;
-width:80%;
-border-radius:10px;
-border:1px solid #00ffcc;
-}
-.date{
-color:#00ffcc;
-font-weight:bold;
-}
-.time{
-    font-size: 80px;
-    font-weight: bold;
-    color:#00ffcc;
+    background:#0d0d0d;
+    color:white;
+    font-family:Arial;
     text-align:center;
+}
+
+h1{
+    color:#00ffcc;
+    margin-top:30px;
+}
+
+.match-card{
+    background:#111;
+    border:2px solid #00ffcc;
+    border-radius:20px;
+    padding:30px;
+    margin:40px auto;
+    width:85%;
+    box-shadow:0 0 20px rgba(0,255,204,0.3);
+    transition:0.3s;
+}
+
+.match-card:hover{
+    transform:scale(1.02);
+    box-shadow:0 0 30px rgba(0,255,204,0.6);
+}
+
+.date{
+    color:#00ffcc;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.players{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.player{
+    text-align:center;
+}
+
+.player img{
+    width:150px;
+    border-radius:15px;
+    border:2px solid #00ffcc;
+}
+
+.vs{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.score{
+    font-size:28px;
+    font-weight:bold;
+    color:#00ffcc;
     margin-top:15px;
 }
-  
+
+.time{
+    font-size:22px;
+    margin-top:10px;
+}
+
 button{
-margin-top:30px;
-padding:10px 20px;
-background:#00ffcc;
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold;
+    margin-top:40px;
+    padding:12px 25px;
+    background:#00ffcc;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
 }
+
 button:hover{
-background:white;
-}
-.match {
-  border: 2px solid #00ffcc;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.match:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 15px #00ffcc;
-}
-
-.result {
-  font-size: 22px;
-  font-weight: bold;
-  margin: 8px 0;
-  color: #00ffcc;
-}
-.players {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-}
-
-.vs {
-    font-size: 32px;
-    font-weight: bold;
-}
-  .match-card {
-    background: #111;
-    border: 2px solid #00ffcc;
-    border-radius: 20px;
-    padding: 30px;
-    margin: 40px auto;
-    width: 85%;
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-    transition: 0.3s;
-}
-
-.match-card:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 30px rgba(0, 255, 204, 0.6);
+    background:white;
 }
 </style>
 </head>
+
 <body>
 
 <h1>Official Matches - PES 2026</h1>
 
+<!-- MATCH 1 -->
 <div class="match-card">
-
+    <div class="date">19/02/2026</div>
     <div class="players">
+        <div class="player">
+            <img src="images/hassan-ghandour.png">
+            <h3>HASSAN GHANDOUR</h3>
+        </div>
 
-    <div>
-        <img src="images/hassan-ghandour.png" width="150">
-        <h3>HASSAN GHANDOUR</h3>
+        <div class="vs">VS</div>
+
+        <div class="player">
+            <img src="images/omar-tabet.png">
+            <h3>OMAR TABET</h3>
+        </div>
     </div>
+    <div class="score">1 - 1</div>
+    <div class="time">21:30</div>
+</div>
 
-    <div class="vs">VS</div>
-
-    <div>
-        <img src="images/omar-tabet.png" width="150">
-        <h3>OMAR TABET</h3>
-    </div>
-
+<!-- MATCH 2 -->
 <div class="match-card">
-  <div class="date">19/02/2026</div>
-  <div class="players">
-    <!-- Omar Hajji -->
-    <div class="player-big">
-      <img src="images/omar-hajji.png" alt="">
-      <h3>OMAR HAJJI</h3>
+    <div class="date">19/02/2026</div>
+    <div class="players">
+        <div class="player">
+            <img src="images/omar-hajji.png">
+            <h3>OMAR HAJJI</h3>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="player">
+            <img src="images/mohammed-belhadf.png">
+            <h3>MOHAMMED BELHADF</h3>
+        </div>
     </div>
+    <div class="score">4 - 4</div>
+    <div class="time">22:00</div>
+</div>
 
-    <div class="vs">VS</div>
+<!-- MATCH 3 -->
+<div class="match-card">
+    <div class="date">19/02/2026</div>
+    <div class="players">
+        <div class="player">
+            <img src="images/walid-london.png">
+            <h3>WALID LONDON</h3>
+        </div>
 
-    <!-- Mohammed Belhadf -->
-    <div class="player-big">
-      <img src="images/mohammed-belhadf.png" alt="">
-      <h3>MOHAMMED BELHADF</h3>
+        <div class="vs">VS</div>
+
+        <div class="player">
+            <img src="images/rayane-basadouk.png">
+            <h3>RAYANE BASADOUK</h3>
+        </div>
     </div>
-
-  </div>
-
-  <div class="score">4 - 4</div>
-  <div class="time">22:00</div>
-
+    <div class="score">1 - 3</div>
+    <div class="time">22:30</div>
 </div>
 
-  
-<div class="match">
-  <div class="date">19/02/2026</div>
-  <div>WALID LONDON vs RAYANE BASADOUK</div>
-  <div class="result">1 - 3</div>
-  <div class="time">22:30</div>
+<!-- MATCH 4 -->
+<div class="match-card">
+    <div class="date">19/02/2026</div>
+    <div class="players">
+        <div class="player">
+            <img src="images/bilal-mharzi.png">
+            <h3>BILAL MHARZI</h3>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="player">
+            <img src="images/aymane-elmahi.png">
+            <h3>AYMANE ELMAHI</h3>
+        </div>
+    </div>
+    <div class="score">4 - 2</div>
+    <div class="time">23:00</div>
 </div>
 
-
-<div class="match">
-  <div class="date">19/02/2026</div>
-  <div>BILAL MHARZI vs AYMANE ELMAHI</div>
-  <div class="result">4 - 2</div>
-  <div class="time">23:00</div>
-</div>
-
-<div class="match">
-  <div class="date">19/02/2026</div>
-  <div>HASSAN GHANDOUR vs OMAR TABET</div>
-  <div class="result">1 - 1</div>
-  <div class="time">21:30</div>
-</div>
-
-<div class="match">
-  <div class="date">20/02/2026</div>
-  <div>AZIZ RAHHAOUI vs MAROUANE TAMIRI</div>
-  <div class="result">? - ?</div>
-  <div class="time">21:30</div>
-</div>
-
-<div class="match">
-  <div class="date">20/02/2026</div>
-  <div>ABDELWAHED HARRA vs YOUSSEF EL MOUISSI</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:00</div>
-</div>
-
-<div class="match">
-  <div class="date">20/02/2026</div>
-  <div>MAROUANE EZZIN vs IHAB ELMAHI</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:30</div>
-</div>
-
-<div class="match">
-  <div class="date">20/02/2026</div>
-  <div>ZAKARIA BOUCHABTI vs ISLAM BELHAJ</div>
-  <div class="result">? - ?</div>
-  <div class="time">23:00</div>
-</div>
-
-<div class="match">
-  <div class="date">21/02/2026</div>
-  <div>MOHAMMED ZAOUI vs MOUHCINE GROUZ</div>
-  <div class="result">? - ?</div>
-  <div class="time">21:30</div>
-</div>
-
-<div class="match">
-  <div class="date">21/02/2026</div>
-  <div>ABDELLAH vs HOUSSAM HAJJAOUI</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:00</div>
-</div>
-
-<div class="match">
-  <div class="date">21/02/2026</div>
-  <div>AHMED ELKAMILI vs YAHYA HAKIMI</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:30</div>
-</div>
-<div class="match">
-  <div class="date">21/02/2026</div>
-  <div>HOUSSAM EL HIMRI vs MOHAMMED AZRY</div>
-  <div class="result">? - ?</div>
-  <div class="time">21:30</div
-</div>
-
-<div class="match">
-  <div class="date">22/02/2026</div>
-  <div>MOHAMMED ETAYYEB vs YOUSSEF TABTI</div>
-  <div class="result">? - ?</div>
-  <div class="time">21:30</div>
-</div>
-
-<div class="match">
-  <div class="date">22/02/2026</div>
-  <div>ABDERAZAK HAMIDI vs TAKICHI</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:00</div>
-</div>
-
-<div class="match">
-  <div class="date">22/02/2026</div>
-  <div>TAHA AYMANE ALLA vs REDA SAID</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:30</div>
-</div>
-
-<div class="match">
-  <div class="date">22/02/2026</div>
-  <div>MOHAMMED FEZZARI vs MOUAD BOULIFA</div>
-  <div class="result">? - ?</div>
-  <div class="time">23:00</div>
-</div>
-
-<div class="match">
-  <div class="date">23/02/2026</div>
-  <div>BADER AMMOURI   vs   AMINE JEBBOURI</div>
-  <div class="result">? - ?</div>
-  <div class="time">21:30</div>
-</div>
-
-<div class="match">
-  <div class="date">23/02/2026</div>
-  <div>HICHAM BERTAT   vs    AYYOUB TABIB</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:00</div>
-</div>
-
-<div class="match">
-  <div class="date">23/02/2026</div>
-  <div>AHMED GOURMAT   vs    ABDELATIF AZZAOUI</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:30</div>
-</div>
-
-<div class="match">
-  <div class="date">23/02/2026</div>
-  <div>SALIM ABDELLAOUI     vs    OMAR ATMANI</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:00</div>
-</div>
-
-<div class="match">
-  <div class="date">24/02/2026</div>
-  <div>MOHAMMED BOLBOL    vs    HOUARI BARIGO</div>
-  <div class="result">? - ?</div>
-  <div class="time">21:00</div>
-</div>
-
-<div class="match">
-  <div class="date">24/02/2026</div>
-  <div>HICHAM BOUNAB     vs     ZAKARIA CHAREEF</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:00</div>
-</div>
-
-<div class="match">
-  <div class="date">24/02/2026</div>
-  <div>AMINE HSSAINI   vs   ZAKARIA SARGHOUCHNI</div>
-  <div class="result">? - ?</div>
-  <div class="time">22:30</div>
-</div>
-
-<div class="match">
-  <div class="date">24/02/2026</div>
-  <div>YOUSSEF KOUCHAIH    vs    IBRAHIM EL MOUBARIK</div>
-  <div class="result">? - ?</div>
-  <div class="time">23:00</div>
-</div>
-    
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <button onclick="location.href='index.html'">Back to Home</button>
 
 </body>
