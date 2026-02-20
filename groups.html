@@ -2,140 +2,79 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ZAKI PRO PES26 - Groups</title>
+<title>ZAKI PRO GAMING - GROUPS</title>
 
 <style>
 body{
-    background:#0f172a;
-    color:white;
-    font-family:Arial;
+    font-family: Arial;
+    background:#f4f4f4;
 }
 
 h2{
-    margin-top:40px;
-    text-align:center;
+    background:#1f4e79;
+    color:white;
+    padding:5px;
 }
 
 table{
-    width:90%;
-    margin:20px auto;
+    width:100%;
+    margin-bottom:30px;
     border-collapse:collapse;
-    background:#111827;
+    background:white;
+}
+
+th, td{
+    border:1px solid #999;
+    padding:6px;
+    text-align:center;
 }
 
 th{
-    background:#22c55e;
-    padding:10px;
-}
-
-td{
-    padding:8px;
-    text-align:center;
-    border:1px solid #1f2937;
-}
-
-.first{
-    background:#14532d;
-}
-.second{
-    background:#064e3b;
+    background:#d9e1f2;
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<div id="groups"></div>
+<h1>ZAKI PRO GAMING - RAMADAN 2026</h1>
 
-<script>
+<!-- GROUP 1 -->
+<h2>GROUP 1</h2>
+<table>
+<tr><th>#</th><th>Player</th><th>Pts</th><th>GF</th><th>GA</th><th>GD</th><th>🟨</th><th>🟥</th></tr>
+<tr><td>1</td><td>hassan ghandour</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2</td><td>omer tabet</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>3</td><td>mohammed belhadf</td><td>1</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>4</td><td>amine hajji</td><td>1</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
 
-let groups = {
+<!-- GROUP 2 -->
+<h2>GROUP 2</h2>
+<table>
+<tr><th>#</th><th>Player</th><th>Pts</th><th>GF</th><th>GA</th><th>GD</th><th>🟨</th><th>🟥</th></tr>
+<tr><td>1</td><td>walid london</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2</td><td>rayane basdouk</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>3</td><td>abderazak hamidi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>4</td><td>takichi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
 
-1:["hassan ghandour","omer tabet","mohammed belhadf","amine hajji"],
-2:["walid london","rayane basdouk","abderazak hamidi","takichi"],
-3:["aziz rahhaoui","marouane tamiri","youssef elmoussi","abdelwahed harra"],
-4:["marouane ezzin","zakaria bouchabti","isslam belhaj","ihab elmahi"],
-5:["ahmed el kamili","yahya hakimi","med azry","houssam elhirri"],
-6:["abdellah","houssam hajjaoui","amine hsaini","zakariae sarghouchni"],
-7:["mohammed eteyyeb","youssef tabti","bilal mherzi","aymane elmahi"],
-8:["reda said","taha aymane alla","mouad boulifa","mohammed fezzari"],
-9:["amine jebbouri","bader ammouri","hicham bertat","ayoub tabib"],
-10:["abdelatif azzaoui","ahmed goumat","salim abdellaoui","omar outmani"],
-11:["houari barigo","hicham bounab","mohammed bolbol","zakariae charcef"],
-12:["youssef kouchaij","ibrahim elmoubarik","mouhcine grouz","mohammed zaoui"]
+<!-- GROUP 3 -->
+<h2>GROUP 3</h2>
+<table>
+<tr><th>#</th><th>Player</th><th>Pts</th><th>GF</th><th>GA</th><th>GD</th><th>🟨</th><th>🟥</th></tr>
+<tr><td>1</td><td>aziz rahhaoui</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2</td><td>marouane tamiri</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>3</td><td>youssef elmoussi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>4</td><td>abdelwahed harra</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
 
-};
-
-
-let stats = {}; // هنا تدخل النتائج
-
-
-function render(){
-
-document.getElementById("groups").innerHTML="";
-
-for(let group in groups){
-
-let html = "<h2>Group "+group+"</h2>";
-html += "<table>";
-html += "<tr><th>Player</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th></tr>";
-
-let tableData = [];
-
-groups[group].forEach(player=>{
-
-let p = (stats[group] && stats[group][player]) || {mp:0,w:0,d:0,l:0,gf:0,ga:0};
-
-let gd = p.gf - p.ga;
-let pts = (p.w*3) + (p.d*1);
-
-tableData.push({
-name:player,
-mp:p.mp,
-w:p.w,
-d:p.d,
-l:p.l,
-gf:p.gf,
-ga:p.ga,
-gd:gd,
-pts:pts
-});
-
-});
-
-tableData.sort((a,b)=> b.pts - a.pts || b.gd - a.gd || b.gf - a.gf);
-
-tableData.forEach((row,index)=>{
-
-let className="";
-if(index==0) className="first";
-if(index==1) className="second";
-
-html += "<tr class='"+className+"'>";
-html += "<td>"+row.name+"</td>";
-html += "<td>"+row.mp+"</td>";
-html += "<td>"+row.w+"</td>";
-html += "<td>"+row.d+"</td>";
-html += "<td>"+row.l+"</td>";
-html += "<td>"+row.gf+"</td>";
-html += "<td>"+row.ga+"</td>";
-html += "<td>"+row.gd+"</td>";
-html += "<td>"+row.pts+"</td>";
-html += "</tr>";
-
-});
-
-html += "</table>";
-
-document.getElementById("groups").innerHTML += html;
-
-}
-
-}
-
-render();
-
-</script>
-
-</body>
-</html>
+<!-- GROUP 4 -->
+<h2>GROUP 4</h2>
+<table>
+<tr><th>#</th><th>Player</th><th>Pts</th><th>GF</th><th>GA</th><th>GD</th><th>🟨</th><th>🟥</th></tr>
+<tr><td>1</td><td>marouane ezzin</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2</td><td>zakaria bouchabti</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>3</td><td>isslam belhaj</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>4</td><td>ihab elmahi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
