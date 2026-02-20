@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Groups - ZAKI PRO PES 2026</title>
+<style>
+body{
+background:#0d0d0d;
+font-family:Arial;
+color:white;
+text-align:center;
+}
+h1{
+color:#00ffcc;
+margin-top:30px;
+}
+.group{
+margin:30px auto;
+width:95%;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+th, td{
+border:1px solid #00ffcc;
+padding:6px;
+font-size:14px;
+}
+th{
+background:#00ffcc;
+color:black;
+}
+tr:nth-child(even){
+background:#1a1a1a;
+}
+</style>
+</head>
+<body>
+
+<h1>GROUP STAGE - PES 2026</h1>
+
+<script>
+
+const groups = {
+1:["hassan ghandour","omer tabet","mohammed belhadf","amine hajji"],
+2:["walid london","rayane basdouk","abderazak hamidi","takichi"],
+3:["aziz rahhaoui","marouane tamiri","youssef elmoussi","abdelwahed harra"],
+4:["marouane ezzin","zakaria bouchabti","islam belhaj","ihab elmahi"],
+5:["abdellah","houssam hajjaoui","amine hsaini","zakariae sarghouchni"],
+6:["reda said","taha aymane alla","mouad boulifa","mohammed fezzari"],
+7:["mohammed eteyeb","youssef tabti","bilal mherzi","aymane elmahi"],
+8:["ahmed el kamili","yahya hakimi","med azry","houssam elhirmi"],
+9:["amine jebbouri","bader ammouri","hichem bertat","ayyoub tabib"],
+10:["abdelatif azzaoui","ahmed goumat","salim abdelouoi","omar outmani"],
+11:["houari barigo","hicham bounab","mohammed bolbol","zakariae charcef"],
+12:["youssef kouchaib","ibrahim elmoubarik","mouhcine grouz","mohammed zaoui"]
+};
+
+for(let g=1; g<=12; g++){
+document.write("<div class='group'>");
+document.write("<h2>Group "+g+"</h2>");
+document.write("<table>");
+document.write("<tr><th>Player</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th></tr>");
+
+groups[g].forEach(player=>{
+document.write("<tr>");
+document.write("<td>"+player+"</td>");
+document.write("<td>0</td>");
+document.write("<td>0</td>");
+document.write("<td>0</td>");
+document.write("<td>0</td>");
+document.write("<td>0</td>");
+document.write("<td>0</td>");
+document.write("<td>0</td>");
+document.write("<td>0</td>");
+document.write("</tr>");
+});
+
+document.write("</table>");
+document.write("</div>");
+}
+
+</script>
+
+</body>
+</html>
